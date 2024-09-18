@@ -1,0 +1,130 @@
+/* General Switch Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Centering the toggle group */
+.toggle-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between each row */
+    align-items: flex-start;
+}
+
+/* Align the switches and their labels */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between the switch and label */
+}
+
+/* Ensure all switches are the same width */
+label.switch {
+    text-align: left;
+    width: 120px; /* Fixed width for consistency */
+    height: 60px;
+    border-radius: 60px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ccc; /* Add a border for the off state */
+    transition: border-color 0.3s ease;
+}
+
+label.switch > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+label.switch > input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+label.switch > span:before,
+label.switch > span:after {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+}
+
+label.switch > input[type="checkbox"]:focus ~ span {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+label.switch > span {
+    border-radius: 60px;
+}
+
+label.switch > span:before {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: opacity 0.2s ease-out 0.1s, transform 0.2s ease-out 0.1s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+label.switch > span:after {
+    top: 50%;
+    z-index: 3;
+    transition: transform 0.4s cubic-bezier(0.44, -0.12, 0.07, 1.15);
+    width: 60px;
+    height: 60px;
+    transform: translate3d(0, -50%, 0);
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Toggle Animation when checked */
+label.switch > input[type="checkbox"]:checked ~ span:before {
+    transform: scale(0);
+    opacity: 0.7;
+}
+
+label.switch > input[type="checkbox"]:checked ~ span:after {
+    transform: translate3d(100%, -50%, 0);
+}
+
+/* When checked, remove the border */
+label.switch > input[type="checkbox"]:checked ~ span {
+    border-color: transparent;
+}
+
+/* Individual Colors for each toggle */
+.good-switch {
+    background-color: #4ed164;
+    border-color: #4ed164;
+}
+
+.cheap-switch {
+    background-color: #ffa726;
+    border-color: #ffa726;
+}
+
+.fast-switch {
+    background-color: #42a5f5;
+    border-color: #42a5f5;
+}
+
+/* Styling for the labels to align correctly */
+.toggle-label {
+    font-size: 16px;
+    color: #333;
+}
