@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Settings Choice</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon links -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" />
+  </head>
+  <body>
     <div>
-        <h3>How do you want your project?</h3>
-        <div class="toggle-group">
-            <!-- Toggle 1: Good -->
-            <div class="toggle-container">
-                <label class="switch good-switch">
-                    <input type="checkbox" id="good">
-                    <span></span> 
-                </label>
-                <div class="toggle-label">Good Quality</div>
-            </div>
-
-            <!-- Toggle 2: Cheap -->
-            <div class="toggle-container">
-                <label class="switch cheap-switch">
-                    <input type="checkbox" id="cheap">
-                    <span></span> 
-                </label>
-                <div class="toggle-label">Cheap</div>
-            </div>
-
-            <!-- Toggle 3: Fast -->
-            <div class="toggle-container">
-                <label class="switch fast-switch">
-                    <input type="checkbox" id="fast">
-                    <span></span> 
-                </label>
-                <div class="toggle-label">Fast</div>
-            </div>
+      <h3>How do you want your project?</h3>
+      <div class="toggle-group">
+        <!-- Toggle 1: Good -->
+        <div class="toggle-container">
+          <label class="switch good-switch">
+            <input type="checkbox" id="good" />
+            <span></span>
+          </label>
+          <div class="toggle-label">Good Quality</div>
         </div>
+
+        <!-- Toggle 2: Cheap -->
+        <div class="toggle-container">
+          <label class="switch cheap-switch">
+            <input type="checkbox" id="cheap" />
+            <span></span>
+          </label>
+          <div class="toggle-label">Cheap</div>
+        </div>
+
+        <!-- Toggle 3: Fast -->
+        <div class="toggle-container">
+          <label class="switch fast-switch">
+            <input type="checkbox" id="fast" />
+            <span></span>
+          </label>
+          <div class="toggle-label">Fast</div>
+        </div>
+      </div>
     </div>
 
     <script src="toggle.js"></script>
-</body>
+  </body>
 </html>
